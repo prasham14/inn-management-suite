@@ -97,7 +97,7 @@ const MenuManagement = ({ hotels, menus, onAddMenu, onUpdateMenu, onDeleteMenu }
     setSelectedMenu(prev => prev ? { ...prev, categories: updatedCategories } : null);
   };
 
-  const handleAddItem = (e: React.FormData) => {
+  const handleAddItem = (e: React.FormEvent) => {
     e.preventDefault();
     if (!selectedMenu || !selectedCategoryId) return;
 
